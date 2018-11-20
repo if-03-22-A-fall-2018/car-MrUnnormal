@@ -6,14 +6,18 @@ struct CarImplemantation {
   double fill_level;
   double acceleration_rate;
   int speed;
+  int maax_speed;
+  bool is_rented;
 };
 
-Car jeep1 = {JEEP, SILVER, 80.0, 0.0, 0}
-Car jeep2 = {JEEP, BLACK, 80.0, 0.0, 0}
-Car aixam1 = {AIXAM, RED, 16.0, 0.0, 0}
-Car multipla1 = {FIAT_MULTIPLA, GREEN, 65.0, 0.0, 0}
-Car multipla3 = {FIAT_MULTIPLA, ORANGE, 65.0, 0.0, 0}
-Car multipla2 = {FIAT_MULTIPLA, BLUE, 65.0, 0.0, 0}
+struct CarImplemantation jeep1 = {JEEP, SILVER, 80.0, 0.0, 0};
+struct CarImplemantation jeep2 = {JEEP, BLACK, 80.0, 0.0, 0};
+struct CarImplemantation aixam1 = {AIXAM, RED, 16.0, 0.0, 0};
+struct CarImplemantation multipla1 = {FIAT_MULTIPLA, GREEN, 65.0, 0.0, 0};
+struct CarImplemantation multipla3 = {FIAT_MULTIPLA, ORANGE, 65.0, 0.0, 0};
+struct CarImplemantation multipla2 = {FIAT_MULTIPLA, BLUE, 65.0, 0.0, 0};
+
+Car cars[] = {&aixam1, &multipla1, &multipla2, &multipla3, &jeep1, &jeep2};
 
 Car get_car(CarType car)
 {
