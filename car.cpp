@@ -1,26 +1,36 @@
 #include "car.h"
+#include <stdlib.h>
 
-struct CarImplemantation {
-  enum CarType type;
+struct CarImplementation{
   enum Color color;
+  enum CarType type;
+  int max_speed;
   double fill_level;
   double acceleration_rate;
   int speed;
-  int maax_speed;
   bool is_rented;
 };
 
-struct CarImplemantation jeep1 = {JEEP, SILVER, 80.0, 0.0, 0};
-struct CarImplemantation jeep2 = {JEEP, BLACK, 80.0, 0.0, 0};
-struct CarImplemantation aixam1 = {AIXAM, RED, 16.0, 0.0, 0};
-struct CarImplemantation multipla1 = {FIAT_MULTIPLA, GREEN, 65.0, 0.0, 0};
-struct CarImplemantation multipla3 = {FIAT_MULTIPLA, ORANGE, 65.0, 0.0, 0};
-struct CarImplemantation multipla2 = {FIAT_MULTIPLA, BLUE, 65.0, 0.0, 0};
+#define CAR_NUM 6
 
-Car cars[] = {&aixam1, &multipla1, &multipla2, &multipla3, &jeep1, &jeep2};
+struct CarImplementation aixam1={RED,AIXAM,45,16.0,0.0,0,false};
+struct CarImplementation multipla1={BLUE,FIAT_MULTIPLA,170,65.0,0.0,0,false};
+struct CarImplementation multipla2={BLUE,FIAT_MULTIPLA,170,65.0,0.0,0,false};
+struct CarImplementation multipla3={ORANGE,FIAT_MULTIPLA,170,65.0,0.0,0,false};
+struct CarImplementation jeep1={SILVER,JEEP,196,80.0,0.0,0,false};
+struct CarImplementation jeep2={BLACK,JEEP,196,80.0,0.0,0,false};
+
+Car cars[]={&aixam1,&multipla1,&multipla2,&multipla3,&jeep1,&jeep2};
 
 Car get_car(CarType car)
 {
+  for(int i = 0; i < CAR_NUM; i++)
+  {
+    //if(cars[i] -> is_rented == false)
+    {
+      //return cars[i];
+    }
+  }
   return 0;
 }
 enum CarType get_type(Car car)
