@@ -24,13 +24,6 @@ Car cars[]={&aixam1,&multipla1,&multipla2,&multipla3,&jeep1,&jeep2};
 
 Car get_car(CarType car)
 {
-  for(int i = 0; i < CAR_NUM; i++)
-  {
-    //if(cars[i] -> is_rented == false)
-    {
-      //return cars[i];
-    }
-  }
   return 0;
 }
 enum CarType get_type(Car car)
