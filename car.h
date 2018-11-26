@@ -13,7 +13,7 @@
 #ifndef ___CAR_H
 #define ___CAR_H
 
-typedef struct CarImplemantation* Car;
+typedef struct CarImplementation* Car;
 
 enum CarType {AIXAM, FIAT_MULTIPLA, JEEP};
 enum Color{RED, GREEN, BLUE, ORANGE, SILVER, BLACK};
